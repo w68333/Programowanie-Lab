@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form class="form" name="userForm">
+    <h1 class="form_title">Rejestracja</h1>
+
+    <div class="form_group">
+      <label for="name" class="form_label"></label>
+      <input id="user_name" name="userName" class="form_input" type="text" placeholder="Imię">
+      <p onclick="check()" class="message" id="demo"></p>
+    </div>
+
+    <div class="form_group">
+      <label for="lastName" class="form_label"></label>
+      <input class="form_input" type="text" placeholder="Nazwisko" >
+    </div>
+
+    <div class="form_group">
+      <label class="form_label" for="email"></label>
+      <input class="form_input" type="email" id="email_input" placeholder="Email" onblur="checkEmailValidity()" >
+    </div>
+
+    <div class="form_group">
+      <label class="form_label" for="password"></label>
+      <input class="form_input" type="password" placeholder="Hasło" id="password_input" onkeyup="checkPassword()" >
+      <p id="password_strength"></p>
+    </div>
+
+    <div class="form_group">
+      <label class="form_label" for="num"></label>
+      <input class="form_input" type="text" name="formLen" id="tel" minlength="9" maxlength="12" placeholder="Telefon: +48 YYY-YYY-YYY" >
+    </div>
+
+    <div class="form_group">
+      <label class="form_label" for="dateValue"></label>
+      <input class="form_input" type="date" name="dateValue" >
+    </div>
+
+    <div class="form_group">
+      <label class="form_label" for="country"></label>
+      <select class="form_input" name="country">
+        <option value="">Obierz swój kraj</option>
+        <option value="Polska">Polska</option>
+        <option value="Ukraina">Ukraina</option>
+        <option value="Litwa">Litwa</option>
+        <option value="Francja">Francja</option>
+      </select>
+    </div>
+
+    <div class="form_group">
+      <label class="form_label_płec">Plec</label>
+      <input class="form_sex" type="radio" name="M-W" id="Man">
+      <label for="Man">M</label>
+      <input class="form_sex" type="radio" name="M-W" id="Women">
+      <label for="Women">K</label>
+    </div>
+
+    <button class="form_button" onclick="myFunction()">zapisz</button>
+  </form>
+
+  <script src="Untitled-1.js">
+  </script>
+</body>
+</html>
